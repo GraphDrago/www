@@ -1,0 +1,159 @@
+@font-face {
+
+    font-family:MyriadPro-Regular; /* имя шрифта для CSS правил */
+
+    src: local("MyriadPro-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+    url(MyriadPro-Regular.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+@font-face {
+
+    font-family:MyriadPro-Bold; /* имя шрифта для CSS правил */
+
+    src: local("MyriadPro-Bold"), /* проверяем наличие шрифта в ОС пользователя */
+    url(MyriadPro-Bold.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+body{
+    font-family:Myriad Pro;
+    color:#1F497D;
+
+}
+ul, li {
+    font-family:Myriad Pro;
+    color:#1F497D;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    font-family:Myriad Pro;
+    text-align: center; /* центруем по горизонтали inline-содержимое блока меню */
+    padding: 10px;
+    font-size: 14px;
+}
+.menu li {
+    font-family:Myriad Pro;
+    display: inline; /* делаем элементы списка строчными тегами */
+    margin: 0 15px;
+    font-size: 14px;
+}
+ .menu a {
+
+     font-family:Myriad Pro;
+    display: inline-block; /* делаем ссылки встроенными блоками */
+    color: #1F497D;
+    text-decoration: none;
+    border: 1px #1F497D solid;
+    padding: 8px;
+     font-size: 14px;
+}
+.menu a:hover {
+    color: #1F497D;
+    background: #BCD2EE;
+}
+.menu li.current {
+    font-family:Myriad Pro;
+    font-size: 14px;
+    display: inline-block; /* как и ссылки, делаем пункт current встроенным блоком */
+    color: #1F497D;
+    background: #BCD2EE;
+
+}
+.heading{
+    font-family:Myriad Pro;
+    text-align: center; /* центруем по горизонтали inline-содержимое блока меню */
+    font-weight: bold;
+    padding: 10px;
+    border: 1px #1F497D solid;
+    font-size: 19px;
+    width: 95%;
+    height: 100px;
+    position: relative;
+
+}
+
+.headers{
+    display: inline-block;
+   padding-top: 40px;
+    vertical-align: middle;
+
+}
+.logoff{
+    float: right;
+    display: inline-block;
+    padding-top: 36px;
+    margin-right: 30px;
+    font-size: 15px;
+}
+.log{
+    position: relative;
+    display: inline-block;
+    padding-right: 8px;
+    padding-top: 4px;
+    color:#1F497D;
+
+}
+.img_logo{
+    padding-left: 30px;
+}
+.name_manager{
+    position: absolute;
+    font-size: 14px;
+    float: right;
+    bottom: 10px;
+    right: 40px;
+    font-weight: normal;
+}
+
+#toTop {
+    width:100px;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    bottom:10px; /* отступ кнопки от нижнего края страницы*/
+    right:20px;
+    cursor:pointer;
+    display:none;
+
+}
+.select{
+    width: 270px;
+}
+#admin{
+    background-image: none;
+    background-color: transparent;
+    border: none;
+}
+button{
+    background-image: none;
+    background-color: transparent;
+    border: none;
+}
+
+.add{
+    width: 270px;
+}
+
+#CountCallWithOpening
+{
+    background-color: #DFDFDF;
+}
+#CountPeopleWIthOpening
+{
+    background-color: #DFDFDF;
+}
+#CountPresentationWithOpening
+{
+    background-color: #DFDFDF;
+}
+#CountLettersWithOpening
+{
+    background-color: #DFDFDF;
+}
+textarea{
+    font-family:Myriad Pro;
+    color:#1F497D;
+}
+img{
+    border:none;
+}

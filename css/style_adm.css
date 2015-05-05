@@ -1,0 +1,122 @@
+body{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+form{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+
+#textarea{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+
+input{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+button{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+select{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+
+}
+.edit{
+	width: 50px;
+ }
+ 
+.sortable td {
+       padding:5px;
+       text-align:center;
+   }
+.tableEdit td{
+    padding:5px;
+}
+.admin td {
+    font-family:Myriad Pro;
+    padding:5px;
+    text-align:center;
+    background: #BCD2EE;
+    color:#1F497D ;
+}
+.admin_edit td {
+    font-family:Myriad Pro;
+    padding:5px;
+    text-align:center;
+
+    color:#1F497D ;
+}
+a{
+    text-decoration: none;
+    color:#1F497D ;
+}
+
+.bdrform_tabl {
+        background-color: whiteSmoke;
+        padding: 7px 8px 8px 9px;
+        border: 1px solid #DFDFDF;
+        border-radius: 10px;
+        }
+form {
+    padding:5px;
+        display: block;
+        margin-top: 0em;
+        }
+
+table#bdr_w td.bt1 {
+
+        border-top: 1px solid
+        white;
+        }
+table#bdr_w td {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        }
+
+.formreg td {
+    padding:5px;
+        height: 30px;
+
+        }
+
+.fld{
+  font-family:Myriad Pro;
+  height:25px;
+  border:1px solid #ccc;
+  width:250px;
+  min-width:150px;
+
+}
+
+
+#submit::-moz-focus-inner {
+    border: none;
+}
+table.sortable th{
+    font-family:Myriad Pro;
+    padding:4px; cursor:pointer
+}
+table.sortable thead{
+    padding:5px;background:#e3edef; color:#333333; text-align:center; font-family:Myriad Pro;}
+
+li a{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    text-decoration: none;
+}
+
+
+
+
+
+ 

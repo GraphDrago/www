@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Авторизация</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_adm.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+<body>
+<div >
+    <label style="float: left;padding-top: 31px; padding-left: 63px;"> <img src="img/logo.png" style="width:130px;height:100px;"></label>
+</div>
+<div align="center" >
+ <nav style = "padding-top:100px;align-content: center;">
+				<ul id="login">
+					<li id="login">
+						<div id="login-content">
+							<form id="logIn" name="logIn" action="check.php" method="post" enctype="multipart/form-data">
+								<fieldset id="inputs">
+									<input id="username" type="text" name="login" placeholder="Логин" >
+									<input id="password" type="password" name="password" placeholder="Пароль" >
+								</fieldset>
+								<fieldset id="actions">
+                                    <div id="center">
+									<input type="submit" id="submit" name="submit" value="Войти"
+                                           onclick=" AjaxFormRequest('results', 'logIn', 'check.php')">
+
+                                    </div>
+								</fieldset>
+							</form>
+						</div>                    
+					</li>
+				</ul>
+			</nav>
+
+</div>
+<div id = "results" align="center"></div>
+<script type="text/javascript">
+
+    function AjaxFormRequest(result_id,formMain,url) {
+        $("#logIn").submit(function(event) {
+            event.preventDefault();
+
+        $.ajax({
+            url:     url,
+            type:     "POST",
+            dataType: "json",
+            data: jQuery("#"+formMain).serialize(),
+            success: function(response) {
+                if(!response.redirect) {
+
+                    $('#' + result_id).html(response.found);
+
+                } else {
+                    location.href = response.redirect;
+                }
+            },
+
+            error: function(jqXHR, exception) {
+                if (jqXHR.status === 0) {
+                    alert('Not connect.\n Verify Network.');
+                } else if (jqXHR.status == 404) {
+                    alert('Requested page not found. [404]');
+                } else if (jqXHR.status == 500) {
+                    alert('Internal Server Error [500].');
+                } else if (exception === 'parsererror') {
+                    alert('Requested JSON parse failed.');
+                } else if (exception === 'timeout') {
+                    alert('Time out error.');
+                } else if (exception === 'abort') {
+                    alert('Ajax request aborted.');
+                } else {
+                    alert('Uncaught Error.\n' + jqXHR.responseText);
+                }
+            }
+        });
+        });
+    }
+</script>
+</body>
+</html>

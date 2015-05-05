@@ -1,0 +1,341 @@
+/*	=	File Load */
+/* Стили для контейнера */
+@font-face {
+
+    font-family:MyriadPro-Regular; /* имя шрифта для CSS правил */
+
+    src: local("MyriadPro-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+    url(MyriadPro-Regular.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+@font-face {
+
+    font-family:MyriadPro-Bold; /* имя шрифта для CSS правил */
+
+    src: local("MyriadPro-Bold"), /* проверяем наличие шрифта в ОС пользователя */
+    url(MyriadPro-Bold.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+body{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+
+}
+table{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+
+}
+td{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+    padding:-3px
+}
+form{
+    font-family:Myriad Pro;
+    margin: 20px;
+    color:#1F497D;
+    font-size: 13px;
+
+}
+.formreg{
+    width: 100%;
+   margin-left: 5%;
+}
+
+.title{
+
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+    display:block;
+    font-weight: bold;
+    text-align: left;
+
+
+}
+#ckp{
+    font-family:Myriad Pro;
+    height: 28px;
+    width:350px;
+}
+.txt{
+    font-family:Myriad Pro;
+    display:block;
+    margin-top: -4px;
+    text-align: left;
+}
+.count{
+    width:70px;
+}
+
+.name {
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 18px;
+
+}
+.fld{
+  height:25px;
+  border:1px solid #ccc;
+    font-family:Myriad Pro;
+    color:#1F497D;
+  width:350px;
+
+  }
+textarea{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+    resize: none;
+}
+input{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+}
+select{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    font-size: 13px;
+    border:1px solid #ccc;
+}
+.file-load-block {
+	width: 200px;
+	height: 35px;
+	overflow: hidden;
+	position: relative;
+}
+/* работаем с инпутом который конкретно file */
+.file-load-block input[type=file] {
+	/* делаем кроссбраузерную прозрачность */
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+	/* Позиционируем абсолютно отсносительно контейнера по правому краю */
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	/*
+	Задаем высоту и делаем шрифт огромным
+	для того чтобы кнопка "обзор" занимала все пространство контейнера
+	*/
+	height: 35px;
+	font-size: 600px;
+
+	/* Ставим наш инпут поверх всего содержимого */
+	z-index: 2;
+	cursor: pointer;
+	width: auto;
+}
+/* Стилизируем инпут и кнопку которые под загрузчиком */
+.file-load-block input[type=text] {
+	z-index: 1;
+	width: 190px;
+	padding-right: 10px;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	height: 26px;
+}
+.file-load-block button {
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 181px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px #ccc;
+}
+.file-load-block .button-hover {
+	box-shadow: 0 0 2px #ccc;
+}
+
+
+.progress-button {
+    position: relative;
+    display: inline-block;
+    padding: 0 60px;
+    outline: none;
+    border: none;
+    background: #1d9650;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+    line-height: 7;
+}
+
+
+ nav ul {
+	margin:auto;
+	padding: 0;
+	list-style: none;
+	border-bottom: 2px solid #FF9;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+     -o-border-radius: 3px;
+     -khtml-border-radius: 3px;
+
+}
+
+
+nav #login .active{
+	background: #ff9;
+
+	}
+
+
+nav #login-content {
+    height: 120px;
+  margin:0 auto;
+  /*top: 20px;*/
+  right: 0;
+  z-index: 999;   
+  background: #C0C0C0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#C0C0C0));
+  background-image: -webkit-linear-gradient(top, #F5F5F5, #C0C0C0);
+ background-image: -moz-linear-gradient(top, #F5F5F5, #C0C0C0);
+  background-image: -ms-linear-gradient(top, #F5F5F5, #C0C0C0);
+  background-image: -o-linear-gradient(top,#F5F5F5, #C0C0C0);
+  background-image: linear-gradient(top, #F5F5F5, #C0C0C0);
+    background-image: -ms-linear-gradient(top, #F5F5F5, #778899); /* для IE10+ */
+  padding: 15px;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+    behavior: url(js/ie-css3.htc);
+  -moz-border-radius: 3px 0 3px 3px;
+  -webkit-border-radius: 3px 0 3px 3px;
+  border-radius: 3px 0 3px 3px;
+    behavior: url(js/border-radius.htc);
+
+}
+ 
+nav li #login-content {
+  right: 5px;
+  width: 260px;
+}
+ 
+/*--------------------*/
+#inputs input {
+  border:none;
+  background: #FFF;
+  padding: 3px 3px;
+  margin: 5px 0 0px 0;
+  width: 200px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+    behavior: url(js/border-radius.htc);
+    height: 25px;
+
+
+}
+#inputs{
+    /*margin-bottom: 15px;*/
+}
+
+ 
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #FFFAF0;
+  border:none;
+}
+
+/*--------------------*/
+ #actions {
+     border:none;
+
+
+}
+ #center{
+     /*display: block;*/
+     /*c*/
+     /*text-align: center;*/
+     /*margin-top:15px;*/
+     /**/
+     margin: 0 auto;
+
+
+
+ }
+ 
+ #submit {
+
+     background-color: #D3D3D3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#D3D3D3), to(#778899));
+  background-image: -webkit-linear-gradient(top, #D3D3D3, #778899);
+  background-image: -moz-linear-gradient(top, #D3D3D3, #778899);
+  background-image: -ms-linear-gradient(top, #D3D3D3, #778899);
+  background-image: -o-linear-gradient(top,#D3D3D3, #778899);
+  background-image: linear-gradient(top, #D3D3D3, #778899);
+  background-image: -ms-linear-gradient(top, #D3D3D3, #778899); /* для IE10+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D3D3D3', endColorstr='#778899'); *//* для IE6-9 */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+    behavior: url(js/border-radius.htc);
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    behavior: url(js/ie-css3.htc);
+  border: 1px solid #2F4F4F;
+  height: 25px;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+  margin-top:10px;
+
+}
+
+ #submit:hover,
+ #submit:focus {
+  background-color: #708090;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8FBC8F), to(#708090));
+  background-image: -webkit-linear-gradient(top, #8FBC8F, #708090);
+  background-image: -moz-linear-gradient(top, #8FBC8F, #708090);
+  background-image: -ms-linear-gradient(top, #8FBC8F, #708090);
+  background-image: -o-linear-gradient(top, #8FBC8F, #708090);
+  background-image: linear-gradient(top, #8FBC8F, #708090);
+
+}
+
+ #submit:active {
+
+  outline: none;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    behavior: url(js/ie-css3.htc);
+}
+
+ #submit::-moz-focus-inner {
+  border: none;
+}
+ 
+#login label {
+    font-family:Myriad Pro;
+  float: right;
+  line-height: 30px;
+}
+#login label input {
+    font-family:Myriad Pro;
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+li a{
+    font-family:Myriad Pro;
+    color:#1F497D;
+    text-decoration: none;
+}
+
+ 
